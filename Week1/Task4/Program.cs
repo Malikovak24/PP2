@@ -11,13 +11,17 @@ namespace Task4
         static void Main(string[] args)
         {
             int n = Convert.ToInt32(Console.ReadLine());
-            for(int i=1;i<n;i++)
+            string[,] arr = new string[n, n];
+            for (int i = 0; i < n; i++)
             {
-                for(int j=1;j<=i;j++)
-                {
-                    Console.Write("[*]");
-                }
-                Console.Write("\n");
+                for (int j = 0; j <= i; j++)
+                    arr[i, j] = "[*]";
+            }
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j <= i; j++)
+                    Console.Write(arr[i, j]);
+                Console.WriteLine();
             }
         }
     }
